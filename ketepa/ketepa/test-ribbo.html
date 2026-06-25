@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Ribbo Test</title></head>
+<body>
+<h1>Ribbo Widget Test</h1>
+<p>The Ribbo chat widget should appear in the bottom-right corner.</p>
+
+<!-- <script>
+!function(){let t=document.createElement("script");t.id="ribbo-widget",t.type="text/javascript",t.async=!0,t.src="https://staging.ribbo.ai/api/embed/application/widget",t.dataset.ribboWidgetApplicationId="ugSz6ewYUwzDt4NL7QrX",document.body.append(t),window.Ribbo||(window.Ribbo={updateUser(t){window._Ribbo_updateUser=()=>t}})}();
+</script> -->
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  try {
+    var t = document.createElement('script');
+    t.id = 'ribbo-widget';
+    t.type = 'text/javascript';
+    t.async = true;
+    t.src = 'https://staging.ribbo.ai/api/embed/application/widget';
+    t.dataset.ribboWidgetApplicationId = 'ugSz6ewYUwzDt4NL7QrX';
+    document.body.appendChild(t);
+    if (!window.Ribbo) {
+      window.Ribbo = { updateUser: function(u) { window._Ribbo_updateUser = function() { return u; }; } };
+    }
+  } catch(e) { console.error('Ribbo init error:', e); }
+});
+</script>
+</body>
+</html>
